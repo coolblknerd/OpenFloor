@@ -3,15 +3,33 @@
 <head>
   <title>Openfloor</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' >
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <header class="main_header">
+    <div class="clearfix">
+      <div class='wrapper'>
+        <div id="logo">
+          <p> OpenFloor </p>
+        </div>
+    
+        <div id="buttons">
+          <%= link_to "New Post", new_post_path %>
+        </div>
+      </div>
+    </div> 
+  </header>
+    
+  <div class='wrapper'>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
 
-  <%= yield %>
-
+  <div class='wrapper'>
+    <%= yield %>
+  </div> 
 </body>
 </html>
