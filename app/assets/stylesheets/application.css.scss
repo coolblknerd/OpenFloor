@@ -41,7 +41,10 @@ body {
   background: white;
   #logo { 
     float: left;
-    
+    a {
+      color: #397CAC;
+      text-decoration: none;
+    }
     p {
       text-transform: uppercase;
       font-weight: 700;
